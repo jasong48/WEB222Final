@@ -61,12 +61,13 @@
       <section>
         <h2>Observation Details</h2>
         <p><span class="required"></span> Required field</p>
-        <form name="newObservation" id="form" action="/submit" method="POST">
+        <form name="newObservation" id="form" action="https://formspree.io/f/mrgrbpzz" method="POST">
           <fieldset>
             <legend>Observation</legend>
 
             <label for="species-guess" id="guess" class="required">Species Guess <span id="errormsg"></span></label>
             <input
+              name ="species-guess"
               id="species-guess"
               class="required"
               type="text"
@@ -75,6 +76,7 @@
             />
             <label for="description" id="desc" class="required">Description<span id="errormsg"></span></label>
             <input
+              name = "description"
               id="description"
               type="text"
               placeholder="Roosting on fence post at the edge of a field"
@@ -83,6 +85,7 @@
             <input id="date" type="date" , name="date" tabindex="3" />
             <label for="notes">Notes</label>
             <textarea
+              name = "notes"
               rows="3"
               cols="73"
               id="notes"
@@ -94,13 +97,13 @@
             <legend>Location</legend>
 
             <label for="lat" id="lati" class="required">Latitude<span id="errormsg"></span></label>
-            <input id="lat" type="text" placeholder="43.7955" />
+            <input id="lat" name = "Latitude" type="text" placeholder="43.7955" />
             <label for="lng" id="longi" class="required">Longitude<span id="errormsg"></span></label>
-            <input id="lng" type="text" placeholder="-79.3496" />
+            <input id="lng" name = "Longitude" type="text" placeholder="-79.3496" />
             <input
               type="checkbox"
               id="sharebox"
-              name="share"
+              name="shareBox"
               value="shareLocation"
             />
             <label for="sharebox"
@@ -113,21 +116,22 @@
 
             <label for="name">Photographer Name</label>
             <input
+              name = "PhotographerName"
               id="name"
               type="text"
               maxlength="100"
               placeholder="Karen Shu"
             />
             <label for="email">Photographer Email</label>
-            <input id="email" type="text" placeholder="kshu@photos.com" />
+            <input id="email" name = "email" type="text" placeholder="kshu@photos.com" />
             <label for="upload">Photo</label>
-            <input type="file" id="myFile" name="filename" />
+            <input type="file" id="myFile" name="PhotoFile" />
             <label for="upload"
               >Liscense (<a href="https://creativecommons.org/choose/"
                 >help on choosing a license</a
               >)</label
             >
-            <select id="code">
+            <select name = "LicenseType" id="code">
               <option value="CC-BY" selected>
                 Creative Commons Attribution License
               </option>
@@ -148,7 +152,7 @@
               </option>
             </select>
           </fieldset>
-          <button id="submitter">Submit</button>
+          <button id="form">Submit</button>
         </form>
       </section>
     </main>
