@@ -1,0 +1,27 @@
+/**
+ * Styles for the add-observation.html page 
+ */
+
+#description,
+#name,
+#email {
+  width: 530px;
+}
+
+::placeholder {
+  float: left;
+  float: top;
+}
+
+#submitter {
+  margin-top: 10px;
+}
+.required::after {
+  content: "*";
+  color: red;
+}
+#errormsg
+{
+  display: inline;
+  color: red;
+}
